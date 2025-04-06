@@ -15,6 +15,8 @@ const Navigation = ({ user }) => {
 
     const [open, setOpen] = useState(false)
 
+    const pathName = usePathname();
+
     return (
         <nav className="bg-white border-b border-gray-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,12 +31,12 @@ const Navigation = ({ user }) => {
                         <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                             <NavLink
                                 href="/home"
-                                active={usePathname() === '/home'}>
+                                active={pathName === '/home'}>
                                 Inicio
                             </NavLink>
                             <NavLink
                                 href="/acquisition"
-                                active={usePathname() === '/acquisition'}>
+                                active={pathName === '/acquisition'}>
                                 Adquisiciones
                             </NavLink>
                         </div>
