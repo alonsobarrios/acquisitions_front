@@ -1,8 +1,6 @@
 import { useMemo } from "react";
 
 export default function Indicators({ requests = [] }) {
-
-    console.log(requests);
     
     const indicators = useMemo(() => {
         const total = requests.length;
