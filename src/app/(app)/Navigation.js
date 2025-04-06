@@ -104,7 +104,7 @@ const Navigation = ({ user }) => {
                     <div className="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink
                             href="/home"
-                            active={usePathname() === '/home'}>
+                            active={pathName === '/home'}>
                             Inicio
                         </ResponsiveNavLink>
                     </div>
