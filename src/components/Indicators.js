@@ -4,7 +4,7 @@ export default function Indicators({ requests = [] }) {
     
     const indicators = useMemo(() => {
         const total = requests.length;
-        const totalActives = requests.filter(s => s.status === "1").length;
+        const totalActives = requests.filter(s => String(s.status) === "1").length;
 
         const unitsMap = new Map();
         requests.forEach((s) => {
